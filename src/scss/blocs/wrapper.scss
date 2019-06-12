@@ -1,3 +1,62 @@
 .wrapper {
-    
+    display:grid;
+    grid-template-columns: auto;
+
+    section {
+        padding: 3em;
+
+        h1, h2, .read-btn {
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        h2{
+            font-size: 1.4rem;
+        }
+
+        .read-btn {
+            text-decoration: none;
+            font-weight: bold;
+            background: url('./../assets/img/arrow.svg') no-repeat; 
+            background-size: 10px;
+            background-position: 0 1px;
+            padding-left: 1em;
+            color: $btn-color;
+        }
+
+        .primary {
+            color: $btn-color;
+            padding: 1.5em 1.5em 1.5em calc(3em + 25px);
+            background-position: 1em;
+            border: 1px solid $btn-color;
+            display: inline-block;
+            margin-top: 3em;
+            margin-left: -3em;
+        }
+
+        .clipper {
+            overflow: hidden;
+        }
+
+    }
+
+    section.hero{
+        color: white;
+        padding-top: 8em;
+        background: url('./../assets/img/travaux.png');
+        background-size: cover;
+
+        p{
+            width: 70%;
+            font-size: 1.2rem;
+            margin-bottom: 0;
+        }
+    }
+    section.sidebar, section.subscribe {
+        font-size: .9rem;
+        line-height: 1.6em;
+    }
+    section.sidebar {
+      background: $pinklady;
+    }
 }
