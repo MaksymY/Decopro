@@ -51,6 +51,9 @@
             font-size: 1.2rem;
             margin-bottom: 0;
         }
+        h1{
+            font-size: 2.4rem;
+        }
     }
     section.sidebar, section.subscribe {
         font-size: .9rem;
@@ -58,5 +61,59 @@
     }
     section.sidebar {
       background: $pinklady;
+
+      .read-btn {
+          margin-top: 2em;
+          display: block;
+          background-position: 0.2em;
+      }
+    }
+
+    section.subscribe {
+
+        input {
+            width:calc(100% - 2em);
+            padding: 1em;
+            margin-bottom: 1em;
+        }
+
+        button{
+            color: $btn-color;
+            width:100%; 
+            background: black;
+            padding: 1em;
+            border: none;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px){
+    html{
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 1020px) {
+    header {
+        background: none;
+        .logo{
+            color: white;
+        }
+    }
+
+    .wrapper{
+        grid-template-columns: 70% auto;
+        grid-template-rows: 60% auto;
+        grid-template-areas: "hero featured"
+                             "hero subscribe";
+        height: 100vh;
+    }
+    section.hero{
+        grid-area: hero;
+    }
+    section{
+        display: grid;
+        grid-template-rows: auto;
+        align-items: center;
     }
 }
